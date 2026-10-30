@@ -1,19 +1,31 @@
 
 <script setup>
-    import { ref } from 'vue';
-    
+    import { nextTick, ref } from 'vue';
+
     console.info("Counter Component Loaded")
     let counter = ref({
         count : 0,
         name : "Zoy"
     });
 
-    function increment(){
+    async function increment(){
         console.info(`Increment counter : ${counter.value.count}`);
         counter.value = {
             name: counter.value.name,
             count: counter.value.count + 1
         }
+        
+        await nextTick();
+        counter.value.count++;
+        
+        await nextTick();
+        counter.value.count++;
+        
+        await nextTick();
+        counter.value.count++;
+
+        await nextTick();
+        console.log("Increment count after nextTick")
     }
 
 </script>
