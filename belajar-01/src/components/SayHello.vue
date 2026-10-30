@@ -18,8 +18,9 @@
 
 
     //? solusinya menggunakan metode computed,jika tidak terdapat perubahan pada metode ini, maka tidak akan terpanggil, metode ini akan berubah ketika terdapat data yang diubah atau diupdate
-    const fullName = computed(()=>{
-        console.log("fullName Called");
+    //oldName untuk mengetahui nilai lama sebelum nilai diupdate/diperbarui
+    const fullName = computed((oldName)=>{
+        console.log(`change old name ${oldName}`);
         return `${person.firstName} ${person.lastName}`;
     })
 
