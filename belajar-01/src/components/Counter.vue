@@ -1,21 +1,26 @@
 
 <script setup>
-import { ref } from 'vue';
-
-
+    import { ref } from 'vue';
+    
     console.info("Counter Component Loaded")
-    let count = ref(0);
+    let counter = ref({
+        count : 0,
+        name : "Zoy"
+    });
 
     function increment(){
-        console.info('Increment counter', count.value)
-        count.value++;
+        console.info(`Increment counter : ${counter.value.count}`);
+        counter.value = {
+            name: counter.value.name,
+            count: counter.value.count + 1
+        }
     }
 
 </script>
 
 <template>
     <div>
-        <h1 id="count">Counter : {{ count }}</h1>
+        <h1 id="count">Counter {{ counter.name }} : {{ counter.count }}</h1>
         <button v-on:click="increment">increment</button>
     </div>
 </template>
