@@ -1,18 +1,21 @@
 <script setup>
 const items = [{
-    id:1,
-    text: "Learn Vue 3"
-},{
-    id:2,
-    text: "Learn Vue Router"
-},{
-    id:3,
-    text: "Learn API "
-},{
-    id:4,
-    text: "Learn React then go back"
-}
-];
+    id: 1,
+    text: "Learn Vue 3",
+    done: true
+}, {
+    id: 2,
+    text: "Learn Vue Router",
+    done: false
+}, {
+    id: 3,
+    text: "Learn API ",
+    done: false
+}, {
+    id: 4,
+    text: "Learn React then go back",
+    done: false
+}];
 
 
 </script>
@@ -27,11 +30,16 @@ const items = [{
             </li>
         </ul> -->
         <!-- setelah modifikasi for didalam for -->
-        <ul v-for="item in items" :key="item.id">
-            <li v-for="(value, key) in item">
-                {{ key }} : {{ value }}
-            </li>
-        </ul>
+
+        <!-- directive vfor dan vif bisa langsung diintegrasikan dalam satu element -->
+        <!-- directive v-if memiliki prioritas yang utama dibandingka v-for, jadi jika kondisi v-if terpenuhi, baru iterasi di v-for dilakukan -->
+        <template v-for="item in items">
+            <ul v-if="!item.done" :key="item.id">
+                <li v-for="(value, key) in item">
+                    {{ key }} : {{ value }}
+                </li>
+            </ul>
+        </template>
 
         <!-- List for Range -->
         <div v-for="i in 10">
@@ -39,6 +47,4 @@ const items = [{
         </div>
     </div>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>
