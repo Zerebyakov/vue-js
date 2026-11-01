@@ -19,20 +19,27 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch, watchEffect } from 'vue';
 
 
 
 const productId = ref("product1")
 const products = ref(null);
 
-watch(productId, async (newVal, oldVal) => {
-    console.log("Call watch callback")
-    const respone = await fetch(`/${newVal}.json`);
-    products.value = await respone.json();
-},{
-    immediate: true,
-    // once:true jika ingin hanya dipanggil sekali saja
+// watch(productId, async (newVal, oldVal) => {
+//     console.log("Call watch callback")
+//     const response = await fetch(`/${newVal}.json`);
+//     products.value = await response.json();
+// },{
+//     immediate: true,
+//     //once:true jika ingin hanya dipanggil sekali saja
+// })
+
+//alternatif atau shortcut jika menggunakan watch include immediate:true
+watchEffect(async () => {
+    console.log("Call the watch callback")
+    const response = await fetch(`/${productId.value}.json`);
+    products.value = await response.json()
 })
 
 </script>
