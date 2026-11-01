@@ -26,17 +26,31 @@
 
     const counter = ref(0)
 
-    function increment(){
-        console.log("increment called");
-        counter.value++;
+    // fungsi ini bisa dihapus jika menggunakna inline statement
+    // function increment(){
+    //     console.log("increment called");
+    //     counter.value++;
+    // }
+
+    // event handler : memunculkan nama langsung, tanpa submit dengan menggunakan event handler, pada template bisa menggunakan v-on:input atau @input
+    //tidak perlu menggunakan getelemntbyid, langsung menggunakan paramert event untuk mengambil state
+    function changeFirstName(event){ 
+        person.firstName = event.target.value;
     }
+    function changeLastName(event){ 
+        person.lastName = event.target.value;
+    }
+
+
 </script>
 
 <template>
     <div>
-        <button v-on:click="increment">increment {{ counter }}</button> <br>
-        <input placeholder="First Name" type="text" id="firstName"> <br>
-        <input placeholder="Last Name" type="text" id="lastName"> <br>
+        <!-- contoh penggunaan inline statement tanpa memanggil fungsi increment, dengan memanggil statemenya langsung yaitu counter++ -->
+        <button v-on:click="counter++">increment {{ counter }}</button> <br>
+
+        <input placeholder="First Name" type="text" id="firstName" v-on:input="changeFirstName"> <br>
+        <input placeholder="Last Name" type="text" id="lastName" @input="changeLastName"> <br>
         <button v-on:click="sayHello">Say Hello</button>
     </div>
     <h1>Hello {{ fullName }}</h1>
