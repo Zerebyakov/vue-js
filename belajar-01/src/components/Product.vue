@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { ref, watch, watchEffect } from 'vue';
+import { onWatcherCleanup, ref, watch, watchEffect } from 'vue';
 
 
 
@@ -37,6 +37,9 @@ const products = ref(null);
 
 //alternatif atau shortcut jika menggunakan watch include immediate:true
 watchEffect(async () => {
+    onWatcherCleanup(()=>{
+        console.log("Clean Up")
+    })
     console.log("Call the watch callback")
     const response = await fetch(`/${productId.value}.json`);
     products.value = await response.json()
