@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Le Minerale 600ml",
+        "price": 4000
+    },
+    {
+        "id": 2,
+        "name": "Roma Malkist",
+        "price": 9000
+    },
+    {
+        "id": 3,
+        "name": "Qtela Singkong",
+        "price": 10000
+    },
+    {
+        "id": 4,
+        "name": "Kusuka Keripik Singkong",
+        "price": 12000
+    },
+    {
+        "id": 5,
+        "name": "Nabati Wafer Richeese",
+        "price": 2000
+    },
+    {
+        "id": 6,
+        "name": "Garuda Kacang Atom",
+        "price": 8000
+    },
+    {
+        "id": 7,
+        "name": "Tic Tac Snack",
+        "price": 5000
+    },
+    {
+        "id": 8,
+        "name": "Pocari Sweat 500ml",
+        "price": 7000
+    },
+    {
+        "id": 9,
+        "name": "Floridina Orange",
+        "price": 4000
+    },
+    {
+        "id": 10,
+        "name": "You C1000",
+        "price": 8000
+    },
+    {
+        "id": 11,
+        "name": "Marjan Cocopandan",
+        "price": 18000
+    },
+    {
+        "id": 12,
+        "name": "Sasa Tepung Bumbu",
+        "price": 7000
+    },
+    {
+        "id": 13,
+        "name": "Royco Kaldu Ayam",
+        "price": 2000
+    },
+    {
+        "id": 14,
+        "name": "Sajiku Tepung Bumbu",
+        "price": 6000
+    },
+    {
+        "id": 15,
+        "name": "Minyak Goreng Sania 1L",
+        "price": 18000
+    },
+    {
+        "id": 16,
+        "name": "Tepung Terigu Segitiga Biru",
+        "price": 12000
+    },
+    {
+        "id": 17,
+        "name": "Gulaku Gula Pasir 1kg",
+        "price": 18000
+    },
+    {
+        "id": 18,
+        "name": "Susu Frisian Flag",
+        "price": 4000
+    },
+    {
+        "id": 19,
+        "name": "Kecap Sedaap",
+        "price": 11000
+    },
+    {
+        "id": 20,
+        "name": "Sambal Dua Belibis",
+        "price": 14000
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Indomie Goreng",
+        "price": 3500
+    },
+    {
+        "id": 2,
+        "name": "Kecap Bango",
+        "price": 12000
+    },
+    {
+        "id": 3,
+        "name": "Teh Botol Sosro",
+        "price": 5000
+    },
+    {
+        "id": 4,
+        "name": "Kopi Kapal Api",
+        "price": 15000
+    },
+    {
+        "id": 5,
+        "name": "SilverQueen Chocolate",
+        "price": 18000
+    },
+    {
+        "id": 6,
+        "name": "Tolak Angin",
+        "price": 4000
+    },
+    {
+        "id": 7,
+        "name": "Sari Roti",
+        "price": 12000
+    },
+    {
+        "id": 8,
+        "name": "Chitato",
+        "price": 11000
+    },
+    {
+        "id": 9,
+        "name": "Aqua 600ml",
+        "price": 4000
+    },
+    {
+        "id": 10,
+        "name": "Kecap ABC",
+        "price": 10000
+    },
+    {
+        "id": 11,
+        "name": "Good Day Cappuccino",
+        "price": 2000
+    },
+    {
+        "id": 12,
+        "name": "Roma Kelapa",
+        "price": 9000
+    },
+    {
+        "id": 13,
+        "name": "Mie Sedaap Goreng",
+        "price": 3500
+    },
+    {
+        "id": 14,
+        "name": "Taro Net",
+        "price": 8000
+    },
+    {
+        "id": 15,
+        "name": "Energen Cokelat",
+        "price": 2500
+    },
+    {
+        "id": 16,
+        "name": "Teh Pucuk Harum",
+        "price": 4000
+    },
+    {
+        "id": 17,
+        "name": "Beng-Beng",
+        "price": 3000
+    },
+    {
+        "id": 18,
+        "name": "Sambal ABC",
+        "price": 12000
+    },
+    {
+        "id": 19,
+        "name": "Tango Wafer",
+        "price": 8000
+    },
+    {
+        "id": 20,
+        "name": "Kopi Good Day Freeze",
+        "price": 7000
+    }
+]
