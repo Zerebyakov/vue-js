@@ -1,7 +1,7 @@
 <template>
     <div>
         <label for="productId">
-            Product Id : 
+            Product Id :
             <select v-model="productId">
                 <option value="product1">Product 1</option>
                 <option value="product2">Product 2</option>
@@ -23,20 +23,18 @@ import { ref, watch } from 'vue';
 
 
 
-const productId = ref("")
+const productId = ref("product1")
 const products = ref(null);
 
-watch(productId, async(newVal, oldVal) =>{
-    if (newVal) {
-        const respone = await fetch(`/${newVal}.json`);
-        products.value = await respone.json();
-    } else {
-        products.value = null
-    }
+watch(productId, async (newVal, oldVal) => {
+    console.log("Call watch callback")
+    const respone = await fetch(`/${newVal}.json`);
+    products.value = await respone.json();
+},{
+    immediate: true,
+    // once:true jika ingin hanya dipanggil sekali saja
 })
 
 </script>
 
-<style scoped>
-
-</style>s
+<style scoped></style>s
