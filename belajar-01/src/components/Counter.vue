@@ -10,11 +10,11 @@
 
     import { nextTick, ref } from 'vue';
 
-    const props = defineProps(["name"])
+    const props = defineProps(["name","initialCount"])
 
     console.info("Counter Component Loaded")
     let counter = ref({
-        count : 0,
+        count : Number(props.initialCount),
         name : "Zoy"
     });
 
