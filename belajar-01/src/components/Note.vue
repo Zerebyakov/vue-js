@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { reactive, ref, useTemplateRef } from 'vue';
+import { onBeforeMount, onMounted, onUpdated, reactive, ref, useTemplateRef } from 'vue';
 
 
 const notes = reactive([])
@@ -33,6 +33,18 @@ function addNote(){
         })
     }
 }
+// sebelum Vue membuat dan memasang DOM komponen ke halaman
+onBeforeMount(()=>{
+    console.info(`onBeforeMount`)
+})
+// kondisi ketika komponen sudah dipasang ke halaman HTML (DOM)
+onMounted(()=>{
+    console.info(`onMounted`)
+})
+// ketika data reaktif berubah dan Vue selesai memperbarui DOM
+onUpdated(()=>{
+    console.info(`onUpdated`)
+})
 
 </script>
 
