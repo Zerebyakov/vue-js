@@ -8,18 +8,23 @@
                 <option value="product3">Product 3</option>
             </select>
         </label>
-        <div v-for="product in products" :key="product.id">
+
+        <div v-for="product in products">
+            <ProductDetail :id="product.id" :price="product.price" :name="product.name" />
+        </div>
+        <!-- <div v-for="product in products" :key="product.id">
             <h1>Product</h1>
             <p>Id : {{ product.id }}</p>
             <p>Name : {{ product.name }}</p>
             <p>Price : {{ product.price }}</p>
-        </div>
+        </div> -->
 
     </div>
 </template>
 
 <script setup>
 import { onWatcherCleanup, ref, watch, watchEffect } from 'vue';
+import ProductDetail from './ProductDetail.vue';
 
 
 
@@ -47,4 +52,6 @@ watchEffect(async () => {
 
 </script>
 
-<style scoped></style>s
+<style scoped>
+
+</style>
