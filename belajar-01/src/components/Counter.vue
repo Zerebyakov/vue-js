@@ -40,7 +40,7 @@
 
 <template>
     <div>
-        <h1 id="count">Counter {{ counter.name }} : {{ counter.count }}</h1>
+        <h1 id="count">Counter : {{ counter.count }}</h1>
         <button v-on:click="increment">increment</button>
     </div>
 </template>
