@@ -1,42 +1,7 @@
 <template>
     <div>
         <h1> Contact Us</h1>
-        <form>
-            <div>
-                <label for="name">Nama : 
-                    <input type="name" id="name" v-model="contact.name">
-                </label>
-            </div>
-            <div>
-                <label for="email">Email : 
-                    <input type="email" id="email" v-model="contact.email">
-                </label>
-            </div>
-            <div>
-                <label for="age">Age : 
-                    <input type="number" id="age" v-model.number="contact.age">
-                </label>
-            </div>
-            <div>
-                <label for="type">Type :
-                    <select name="type" id="type" v-model="contact.type">
-                        <option value="Regular">Regular</option>
-                        <option value="VIP">VIP</option>
-                    </select>
-                </label>
-            </div>
-            <div>
-                <label for="complain">Complain :
-                    <input type="checkbox" id="complain" v-model="contact.complain">
-                </label>
-            </div>
-            <div>
-                <label for="message">Message :
-                    <textarea name="message" id="message" v-model="contact.message"></textarea>
-                </label>
-            </div>
-        </form>
-
+        <ContactForm  v-model="contact"/>
         <h1>Preview</h1>
         <div>
             <p>Name : {{ contact.name }}</p>
@@ -52,6 +17,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import ContactForm from './ContactForm.vue';
 
 
 const contact = reactive({
