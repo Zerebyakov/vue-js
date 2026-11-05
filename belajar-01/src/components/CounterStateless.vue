@@ -8,11 +8,15 @@
 <script setup>
 
 
-const {name, counter} = defineProps(["name", "counter"])
+const {name, counter, increment} = defineProps({
+    counter: Number,
+    name: String,
+    increment: Number
+})
 const emits = defineEmits(["click"]);
 
 function buttonEmits(){
-    emits("click")
+    emits("click", increment)
 }
 
 </script>
