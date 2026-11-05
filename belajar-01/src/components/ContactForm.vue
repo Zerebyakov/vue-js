@@ -43,7 +43,11 @@
 
 const model = defineModel({
     type: Object,
-    required: true
+    required: true,
+    get:(value) => {
+        value.email = value.email.toUpperCase();
+        return value;
+    }
 })
 
 </script>
