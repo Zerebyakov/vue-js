@@ -41,7 +41,10 @@
 
 <script setup>
 
-const model = defineModel()
+const model = defineModel({
+    type: Object,
+    required: true
+})
 
 </script>
 
