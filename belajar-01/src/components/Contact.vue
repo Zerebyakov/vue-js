@@ -2,7 +2,7 @@
     <div>
         <h1> Contact Us</h1>
         <ContactForm  v-model="contact"/>
-        <ContactList v-model:name="contact.name"
+        <ContactList v-model:name.uppercase="contact.name"
                      v-model:email="contact.email"
                      v-model:age="contact.age"
                      v-model:type="contact.type"

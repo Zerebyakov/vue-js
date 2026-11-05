@@ -14,8 +14,15 @@
 
 <script setup>
 
-const name = defineModel("name",{
-    type:String
+const [name, nameModifier] = defineModel("name",{
+    type:String,
+    get:(value) =>{ 
+        if (nameModifier.uppercase) {
+            return value.toUpperCase();
+        } else {
+            return value
+        }
+     }
 })
 const email = defineModel("email",{
     type:String
