@@ -6,9 +6,9 @@
         <!-- jadi tidak perlu khawatir apabila state akan bentrok antar component -->
         <!-- <h1>Counter Mba </h1> -->
         <Counter v-bind:name="counter2" initial-count="20"/>
-        <CounterStateless name="Ki Joko" :counter="counter"/>
-        <CounterStateless name="Bodo" :counter="counter"/>
-        <button @click="counter++">Increment Counter</button>
+        <CounterStateless name="Ki Joko" :counter="counter" v-on:click="()=> counter +=1"/>
+        <CounterStateless name="Bodo" :counter="counter" @click="()=> counter +=2"/>
+        <!-- <button @click="counter++">Increment Counter</button> -->
     </div>
 </template>
 
