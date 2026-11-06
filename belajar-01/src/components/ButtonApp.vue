@@ -12,7 +12,7 @@ import Container from './Container.vue';
 import MyButton from './MyButton.vue';
 
 
-function clickHandler() {
+function clickHandler(){
     alert("You Click Me!");
     setTimeout(() => {
         alert("Uwuu");
@@ -22,6 +22,7 @@ function clickHandler() {
 </script>
 
 <style scoped>
+
 .button {
     display: inline-flex;
     justify-content: center;
@@ -63,4 +64,6 @@ function clickHandler() {
         transition: none;
     }
 }
+
+
 </style>

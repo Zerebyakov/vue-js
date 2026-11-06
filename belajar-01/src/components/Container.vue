@@ -2,7 +2,9 @@
     <div>
         <h1>{{ title }}</h1>
         <div>
-            <slot></slot>
+            <slot>
+                <p>Anda belum mengisi content nya</p>
+            </slot>
         </div>
 
     </div>
