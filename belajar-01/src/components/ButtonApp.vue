@@ -1,15 +1,15 @@
 <template>
     <div>
         <Container title="Contoh Button">
-            <template #header>
-                <h1>Button App</h1>
+            <template #header="attributes">
+                <h1>Button App {{ attributes.counter }}</h1>
             </template>
-            <template v-slot:default>
+            <template v-slot:default="attributes">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur deserunt quasi similique! Tempore
                     officiis nulla excepturi. Non vel perspiciatis autem nihil quidem accusantium saepe fugiat, commodi
                     expedita id eligendi vero dolores quo voluptas provident tempora possimus blanditiis voluptatum,
                     reiciendis deleniti aspernatur voluptatem doloribus. Amet fugiat recusandae, optio at qui ipsa.</p>
-                <MyButton @click="clickHandler" class="button" name="zoy" />
+                <MyButton @click="clickHandler" class="button" :name="attributes.counter" />
             </template>
             <template #footer>
                 <p>Copyright 2024 @LondoIreng</p>
