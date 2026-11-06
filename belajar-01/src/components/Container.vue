@@ -1,9 +1,18 @@
 <template>
     <div>
-        <h1>{{ title }}</h1>
         <div>
-            <slot>
+            <slot name="header">
+                <p>Default Header</p>
+            </slot>
+        </div>
+        <div>
+            <slot name="default">
                 <p>Anda belum mengisi content nya</p>
+            </slot>
+        </div>
+        <div>
+            <slot name="footer">
+                <p>Default Footer</p>
             </slot>
         </div>
 
