@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MyButton @click="clickHandler" class="button"/>
+        <MyButton @click="clickHandler" class="button" name="zoy"/>
     </div>
 </template>
 
