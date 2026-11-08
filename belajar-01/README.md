@@ -1,5 +1,45 @@
-# Vue 3 + Vite
+Vue.js Fundamental
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Repository ini merupakan dokumentasi dan kumpulan source code dari proses belajar fundamental Vue.js.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Tujuan repository ini adalah memahami konsep dasar Vue.js melalui praktik langsung, mulai dari pengenalan hingga implementasi fitur-fitur dasarnya.
+
+Learning Topics
+Introduction to Vue.js
+Vue Application & Template Syntax
+Data Binding & Event Handling
+Reactivity Fundamentals
+Vue Directives
+Component Fundamentals
+Props & Events
+Lifecycle Hooks
+Composition API
+Project Structure
+text
+vue-js/
+├── belajar-01/
+└── README.md
+
+Getting Started
+
+Clone repository:
+
+bash
+git clone https://github.com/Zerebyakov/vue-js.git
+
+
+Masuk ke direktori project:
+
+bash
+cd vue-js
+
+References
+Vue.js Documentation
+Vue.js Tutorial
+Author
+
+Zerebyakov
+
+GitHub: @Zerebyakov
+
+This repository is part of my journey to learn and understand Vue.js fundamentals through hands-on practice.
