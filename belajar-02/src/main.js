@@ -16,7 +16,7 @@ const router = createRouter({
             component: About
         },
         {
-            path:"/products/:id",
+            path:"/products/:id(\\d+)", // !Matching Syntax - menggunakan Regex pada route param, sehingga bisa melakukan validasi karakter-karakter apa yang bisa digunakan, contoh : (\\d+) artinya hanya menerima digits atau number selain itu not found
             component: ProductDetail
         },
     ],
