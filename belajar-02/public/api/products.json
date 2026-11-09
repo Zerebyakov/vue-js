@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "name": "Indomie Goreng 85gr",
+    "price": 3500
+  },
+  {
+    "id": 2,
+    "name": "Indomie Kuah Ayam Bawang 69gr",
+    "price": 3000
+  },
+  {
+    "id": 3,
+    "name": "Mie Sedaap Goreng 90gr",
+    "price": 3500
+  },
+  {
+    "id": 4,
+    "name": "Pop Mie Ayam Bawang 75gr",
+    "price": 6500
+  },
+  {
+    "id": 5,
+    "name": "Chitato Original 68gr",
+    "price": 11000
+  },
+  {
+    "id": 6,
+    "name": "Qtela Singkong Original 60gr",
+    "price": 9000
+  },
+  {
+    "id": 7,
+    "name": "Taro Net Seaweed 36gr",
+    "price": 5000
+  },
+  {
+    "id": 8,
+    "name": "Kusuka Keripik Singkong Balado 60gr",
+    "price": 8500
+  },
+  {
+    "id": 9,
+    "name": "Chiki Balls 55gr",
+    "price": 7500
+  },
+  {
+    "id": 10,
+    "name": "Oreo Original 133gr",
+    "price": 10500
+  },
+  {
+    "id": 11,
+    "name": "Roma Kelapa 300gr",
+    "price": 12000
+  },
+  {
+    "id": 12,
+    "name": "Biskuat Original 56gr",
+    "price": 5000
+  },
+  {
+    "id": 13,
+    "name": "Good Time Cookies Chocolate Chip 72gr",
+    "price": 8500
+  },
+  {
+    "id": 14,
+    "name": "Nextar Nastar 42gr",
+    "price": 5000
+  },
+  {
+    "id": 15,
+    "name": "Tango Wafer Chocolate 47gr",
+    "price": 4000
+  },
+  {
+    "id": 16,
+    "name": "Beng-Beng Share It 95gr",
+    "price": 11000
+  },
+  {
+    "id": 17,
+    "name": "SilverQueen Chunky Bar 33gr",
+    "price": 12000
+  },
+  {
+    "id": 18,
+    "name": "KitKat 2 Fingers 17gr",
+    "price": 5000
+  },
+  {
+    "id": 19,
+    "name": "Sari Roti Tawar 200gr",
+    "price": 16000
+  },
+  {
+    "id": 20,
+    "name": "Sari Roti Cokelat 55gr",
+    "price": 5000
+  },
+  {
+    "id": 21,
+    "name": "So Nice Sosis Siap Makan 24gr",
+    "price": 3000
+  },
+  {
+    "id": 22,
+    "name": "Pronas Kornet Sapi 198gr",
+    "price": 22000
+  },
+  {
+    "id": 23,
+    "name": "ABC Sardines Saus Tomat 155gr",
+    "price": 13000
+  },
+  {
+    "id": 24,
+    "name": "BonCabe Keripik Singkong Level 10 60gr",
+    "price": 10000
+  },
+  {
+    "id": 25,
+    "name": "Roma Malkist Crackers 135gr",
+    "price": 8000
+  }
+]

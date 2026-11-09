@@ -1,14 +1,20 @@
 <template>
-    <div v-if="loaded">
-        <h1>{{ product.id }} - {{ product.name }}</h1>
-        <p>Price : {{ product.price }}</p>
-    </div>
-    <div v-else-if="error">
-        <h1>Error loading product : {{ route.params.id }}</h1>
-    </div>
-    <div v-else>
-        <h1>Loading product : {{ route.params.id }}</h1>
-    </div>
+    <template v-if="route.params.id">
+
+        <div v-if="loaded">
+            <h1>{{ product.id }} - {{ product.name }}</h1>
+            <p>Price : {{ product.price }}</p>
+        </div>
+        <div v-else-if="error">
+            <h1>Error loading product : {{ route.params.id }}</h1>
+        </div>
+        <div v-else>
+            <h1>Loading product : {{ route.params.id }}</h1>
+        </div>
+    </template>
+    <template v-else>
+        <h1>No product selected</h1>
+    </template>
 </template>
 
 <script setup>
@@ -22,20 +28,22 @@ const product = ref(null)
 const route = useRoute()
 
 watchEffect(() => {
-    fetch(`/api/products/${route.params.id}.json`)
-        .then(res => res.json())
-        .then(data => {
-            // jika data banyak atau array, gunakan line code ini
-            // const result = data.find(
-            //     item => item.id === Number(route.params.id)
-            // )
-            product.value = data;
-            loaded.value = true;
-        })
-        .catch(err => {
-            console.error(`Error loading product : ${err}`)
-            error.value = true;
-        })
+    if (route.params.id) {
+        fetch(`/api/products/${route.params.id}.json`)
+            .then(res => res.json())
+            .then(data => {
+                // jika data banyak atau array, gunakan line code ini
+                // const result = data.find(
+                //     item => item.id === Number(route.params.id)
+                // )
+                product.value = data;
+                loaded.value = true;
+            })
+            .catch(err => {
+                console.error(`Error loading product : ${err}`)
+                error.value = true;
+            })
+    }
 })
 
 </script>
