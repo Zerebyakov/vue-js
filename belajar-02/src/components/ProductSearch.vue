@@ -37,7 +37,8 @@ const router = useRouter();
 
 watchEffect(() => {
     router.replace({
-        query:{
+        name: 'product-search',
+        query: {
             product: search.value
         }
     })
@@ -50,6 +51,4 @@ watchEffect(() => {
 console.log(search)
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

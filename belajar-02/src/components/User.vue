@@ -3,9 +3,9 @@
         <h1>Users</h1>
         <!-- !PERBEDAAN anchor dengan RouterLink(vue) -->
         <ul>
-            <li><RouterLink to="/users/profile">Profile</RouterLink></li>
-            <li><RouterLink to="/users/order">Order</RouterLink></li>
-            <li><RouterLink to="/users/wishlist">Wishlist</RouterLink></li>
+            <li><RouterLink :to="{name: `user-profile`}">Profile</RouterLink></li>
+            <li><RouterLink :to="{name: `user-order`}">Order</RouterLink></li>
+            <li><RouterLink :to="{name: `user-wishlist`}">Wishlist</RouterLink></li>
         </ul>
         <!-- ? jika menggunakan anchor halaman akan direload ulang, yang menyebabkan web menjadi lama -->
         <!-- <ul>

@@ -24,7 +24,8 @@ const router = createRouter({
         },
         {
             path:"/products/search",
-            component: ProductSearch
+            component: ProductSearch,
+            name: "product-search"
         },
         {
             path:"/products/:id(\\d+)?", // !Matching Syntax - menggunakan Regex pada route param, sehingga bisa melakukan validasi karakter-karakter apa yang bisa digunakan, contoh : (\\d+) artinya hanya menerima digits atau number selain itu not found
@@ -37,19 +38,22 @@ const router = createRouter({
             children:[
                 {
                     path:"",
-                    component:UserProfile
+                    component:UserProfile  
                 },
                 {
                     path:"profile",
-                    component:UserProfile
+                    component:UserProfile,
+                    name:"user-profile"
                 },
                 {
                     path:"order",
-                    component:UserOrder
+                    component:UserOrder,
+                    name:"user-order"
                 },
                 {
                     path:"wishlist",
-                    component:UserWishlist
+                    component:UserWishlist,
+                    name:"user-wishlist"
                 }
             ]
         },
