@@ -36,7 +36,7 @@ const search = ref(route.query.product || '');
 const router = useRouter();
 
 watchEffect(() => {
-    router.push({
+    router.replace({
         query:{
             product: search.value
         }
