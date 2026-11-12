@@ -73,7 +73,7 @@ const router = createRouter({
                     path: "profile",
                     name: "user-profile",
                     components: {
-                        header: () => import(`./components/UserOrder.vue`),
+                        header: () => import('./components/UserHeader.vue'),
                         default: () => import(`./components/UserProfile.vue`)
                     }
                 },
@@ -81,7 +81,7 @@ const router = createRouter({
                     path: "order",
                     name: "user-order",
                     components: {
-                        header: () => import(`./components/UserOrder.vue`),
+                        header: () => import('./components/UserHeader.vue'),
                         default: () => import(`./components/UserOrder.vue`),
                         footer: () => import(`./components/UserOrderFooter.vue`)
                     }
