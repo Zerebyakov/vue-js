@@ -5,6 +5,9 @@
 </template>
 
 <script setup>
+const {requestId} = defineProps(["requestId"])
+
+console.log(`Request Id : ${requestId}`)
 
 </script>
 
