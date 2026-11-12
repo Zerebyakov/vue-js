@@ -61,42 +61,44 @@ const router = createRouter({
             //     id: route.params.id
             // })
         },
+        // ! Lazy Loading Route
+        // saat membuat halaman yang lumayan banyak, mungkin ada baiknya komponen diload secara lazy (ketika dikunjungi, baru diload), secara default seluruh komponen akan diload diawal karena kita lakukan import dimain js 
         {
             path: "/users",
-            component: User,
+            component: () => import('./components/User.vue'),
             children: [
                 {
                     path: "",
                     name: "user",
                     components: {
-                        default: UserProfile,
-                        header: UserHeader
+                        header: () => import('./components/UserHeader.vue'),
+                        default: () => import('./components/UserProfile.vue')
                     }
                 },
                 {
                     path: "profile",
                     name: "user-profile",
                     components: {
-                        default: UserProfile,
-                        header: UserHeader
+                        header: () => import(`./components/UserOrder.vue`),
+                        default: () => import(`./components/UserProfile.vue`)
                     }
                 },
                 {
                     path: "order",
                     name: "user-order",
                     components: {
-                        default: UserOrder,
-                        header: UserHeader,
-                        footer: UserOrderFooter
+                        header: () => import(`./components/UserOrder.vue`),
+                        default: () => import(`./components/UserOrder.vue`),
+                        footer: () => import(`./components/UserOrderFooter.vue`)
                     }
                 },
                 {
                     path: "wishlist",
                     name: "user-wishlist",
                     components: {
-                        default: UserWishlist,
-                        header: UserHeader,
-                        footer: UserWishlistFooter
+                        header: () => import(`./components/UserHeader.vue`),
+                        default: () => import(`./components/UserWishlist.vue`),
+                        footer: () => import(`./components/UserWishlistFooter.vue`)
                     }
                 }
             ]

@@ -2,6 +2,7 @@
     <div>
         <h1>{{title}}</h1>
         <p>This is home page!</p>
+        <RouterLink to="/users">Users</RouterLink>
     </div>
 </template>
 
