@@ -36,7 +36,10 @@ const router = createRouter({
         {
             path: "/products/search",
             component: ProductSearch,
-            name: "product-search"
+            name: "product-search",
+            props: route=>({
+                product: route.query.product
+            })
         },
         {
             path: "/products/search/:keyword",
@@ -54,6 +57,9 @@ const router = createRouter({
             // TODO Optional Param - kita bisa buat route param menjadi optional(tidak wajib diisi), caranya kita bisa tambahkan (?) dibelakang Route Params
             component: ProductDetail,
             props:true
+            // props: route =>({
+            //     id: route.params.id
+            // })
         },
         {
             path: "/users",
