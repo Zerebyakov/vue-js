@@ -13,7 +13,7 @@ const router = createRouter({
         {
             path: "/",
             component: Home,
-            props:{
+            props: {
                 title: "Home Page"
             }
         },
@@ -31,7 +31,7 @@ const router = createRouter({
             path: "/products/search",
             component: ProductSearch,
             name: "product-search",
-            props: route=>({
+            props: route => ({
                 product: route.query.product
             })
         },
@@ -39,9 +39,9 @@ const router = createRouter({
             path: "/products/search/:keyword",
             redirect: route => {
                 return {
-                    name:"product-search",
-                    query:{
-                        product : route.params.keyword
+                    name: "product-search",
+                    query: {
+                        product: route.params.keyword
                     }
                 }
             }
@@ -50,7 +50,7 @@ const router = createRouter({
             path: "/products/:id(\\d+)?", // !Matching Syntax - menggunakan Regex pada route param, sehingga bisa melakukan validasi karakter-karakter apa yang bisa digunakan, contoh : (\\d+) artinya hanya menerima digits atau number selain itu not found
             // TODO Optional Param - kita bisa buat route param menjadi optional(tidak wajib diisi), caranya kita bisa tambahkan (?) dibelakang Route Params
             component: ProductDetail,
-            props:true
+            props: true
             // props: route =>({
             //     id: route.params.id
             // })
@@ -99,13 +99,29 @@ const router = createRouter({
         },
         {
             path: "/:notfound*",
-            component: NotFound
+            component: NotFound,
+            // Per-Route Guard
+            // jika ingin menambahkan Guard per route kita juga bisa menambahkan beforeEnter(to, from, next) pada route yang kita inginkan
+            beforeEnter:(to, from, next) =>{
+                console.info(`Not Found ${to.fullPath}`)
+                next()
+            }
         }
     ],
     // vue menyediakan 3 mode history : 
     history: createWebHistory() // TODO - HTML5 Mode -> ketika menggunakan mode ini, URL akan terlihat normal seperti http://domain/users/profile, tetapi perlu hati hati karena sebenarnya kita mengakses file index.html yang artinya semua req yang masuk harus diterima oleh file index.html
     // history:createWebHashHistory() // TODO - Hash Mode -> ketika menggunakan hash mode, maka kketika mengakses URL path kita akan menggunakan hash, misal http://nama-domain/#/users/profile
     // history:createMemoryHistory() // TODO - Memory Mode -> ketika menggunakan Memory mode , maka tidak akan ada perubahan URL pada browser artinya perpindahan halaman harus dilakukan menggunakan RouterLink atau secara manual menggunakan router.push()
+})
+
+// Navigation Guards
+// router di vue memiliki fitur Guards / Middleware, fitur yang memungkinkan kita menambah kode yang diakses sebelum atau sesudah navigasi. ini cocok untuk melakukan kode yang sama sebelum dan setelah navigasi
+router.beforeEach((to, from, next) => {
+    console.info(`before navigation to ${to.fullPath} from ${from.fullPath}`)
+    next()
+})
+router.afterEach((to, from) => {
+    console.info(`before navigation to ${to.fullPath} from ${from.fullPath}`)
 })
 
 
