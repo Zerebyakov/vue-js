@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import ProductDetail from './components/ProductDetail.vue'
@@ -106,7 +106,10 @@ const router = createRouter({
             component: NotFound
         }
     ],
-    history: createWebHistory()
+    // vue menyediakan 3 mode history : 
+    history: createWebHistory() // TODO - HTML5 Mode -> ketika menggunakan mode ini, URL akan terlihat normal seperti http://domain/users/profile, tetapi perlu hati hati karena sebenarnya kita mengakses file index.html yang artinya semua req yang masuk harus diterima oleh file index.html
+    // history:createWebHashHistory() // TODO - Hash Mode -> ketika menggunakan hash mode, maka kketika mengakses URL path kita akan menggunakan hash, misal http://nama-domain/#/users/profile
+    // history:createMemoryHistory() // TODO - Memory Mode -> ketika menggunakan Memory mode , maka tidak akan ada perubahan URL pada browser artinya perpindahan halaman harus dilakukan menggunakan RouterLink atau secara manual menggunakan router.push()
 })
 
 
