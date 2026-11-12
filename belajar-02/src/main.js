@@ -20,6 +20,11 @@ const router = createRouter({
             path: "/",
             component: Home
         },
+        // contoh redirect ke home
+        {
+            path: "/home",
+            redirect: '/'
+        },
         {
             path: "/about",
             component: About,
@@ -29,6 +34,17 @@ const router = createRouter({
             path: "/products/search",
             component: ProductSearch,
             name: "product-search"
+        },
+        {
+            path: "/products/search/:keyword",
+            redirect: route => {
+                return {
+                    name:"product-search",
+                    query:{
+                        product : route.params.keyword
+                    }
+                }
+            }
         },
         {
             path: "/products/:id(\\d+)?", // !Matching Syntax - menggunakan Regex pada route param, sehingga bisa melakukan validasi karakter-karakter apa yang bisa digunakan, contoh : (\\d+) artinya hanya menerima digits atau number selain itu not found
