@@ -18,7 +18,10 @@ const router = createRouter({
     routes: [
         {
             path: "/",
-            component: Home
+            component: Home,
+            props:{
+                title: "Home Page"
+            }
         },
         // contoh redirect ke home
         {
@@ -49,7 +52,8 @@ const router = createRouter({
         {
             path: "/products/:id(\\d+)?", // !Matching Syntax - menggunakan Regex pada route param, sehingga bisa melakukan validasi karakter-karakter apa yang bisa digunakan, contoh : (\\d+) artinya hanya menerima digits atau number selain itu not found
             // TODO Optional Param - kita bisa buat route param menjadi optional(tidak wajib diisi), caranya kita bisa tambahkan (?) dibelakang Route Params
-            component: ProductDetail
+            component: ProductDetail,
+            props:true
         },
         {
             path: "/users",

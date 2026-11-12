@@ -1,15 +1,15 @@
 <template>
-    <template v-if="route.params.id">
+    <template v-if="id">
 
         <div v-if="loaded">
             <h1>{{ product.id }} - {{ product.name }}</h1>
             <p>Price : {{ product.price }}</p>
         </div>
         <div v-else-if="error">
-            <h1>Error loading product : {{ route.params.id }}</h1>
+            <h1>Error loading product : {{ id }}</h1>
         </div>
         <div v-else>
-            <h1>Loading product : {{ route.params.id }}</h1>
+            <h1>Loading product : {{ id }}</h1>
         </div>
     </template>
     <template v-else>
@@ -25,11 +25,12 @@ import { useRoute } from 'vue-router';
 const loaded = ref(false)
 const error = ref(false)
 const product = ref(null)
-const route = useRoute()
+// const route = useRoute()
+const {id} = defineProps([`id`])
 
 watchEffect(() => {
-    if (route.params.id) {
-        fetch(`/api/products/${route.params.id}.json`)
+    if (id) {
+        fetch(`/api/products/${id}.json`)
             .then(res => res.json())
             .then(data => {
                 // jika data banyak atau array, gunakan line code ini
