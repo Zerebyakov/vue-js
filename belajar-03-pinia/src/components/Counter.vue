@@ -3,6 +3,7 @@
         <h1>Counter {{ counterStore.counter }}</h1>
         <button @click="counterStore.increment()">Increment</button>
         <button @click="counterStore.reset()">Reset</button>
+        <button @click="logDoubled">Log Doubled</button>
     </div>
 </template>
 
@@ -19,6 +20,10 @@ counterStore.$subscribe((mutations, state)=>{
 counterStore.$onAction((action)=>{
     console.info(action)
 })
+
+function logDoubled (){
+    console.info(counterStore.doubled)
+}
 </script>
 
 <style lang="scss" scoped>
