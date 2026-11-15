@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>Counter {{ counterStore.counter }}</h1>
-        <button @click="handleClick">Increment</button>
-        <button @click="handleReset">Reset</button>
+        <button @click="counterStore.increment()">Increment</button>
+        <button @click="counterStore.reset()">Reset</button>
     </div>
 </template>
 
@@ -16,16 +16,9 @@ counterStore.$subscribe((mutations, state)=>{
     console.info(state);
 })
 
-function handleClick(){
-    counterStore.counter++;
-}
-
-function handleReset(){
-    counterStore.$patch({
-        counter: 0
-    })
-}
-
+counterStore.$onAction((action)=>{
+    console.info(action)
+})
 </script>
 
 <style lang="scss" scoped>
@@ -38,4 +31,14 @@ Store sendiri menyediakan method bernama $patch(object), yang bisa kita gunakan 
 
 sebagai contoh kita membuat tombol reset untuk mengubah counter menjadi NOL
 
+-->
+
+<!-- Mutation 
+perubahan terhadap nilai sebuah data, misalnya mengubah nama, menambah jumlah, atau mengubah status.
+
+-->
+
+<!-- Subscribe Action
+selain state , subscribe juga bisa diaction.
+ketika action dipanggil kita mendapat informasi itu,Kita bisa Subscribe Action menggunakan method $onAction(action, state)
 -->
